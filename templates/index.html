@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plugd — Electronics, connected.</title>
+  <meta name="description" content="Shop everyday technology at Plugd.">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="announcement">New season, new tech. Discover your next upgrade.</div>
+  <header class="site-header">
+    <div class="nav-main">
+      <a class="brand" href="/" aria-label="Plugd home"><span class="brand-mark">P</span> plugd<span class="brand-dot">.</span></a>
+      <label class="search-box" for="searchInput">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search phones, laptops, audio..." autocomplete="off">
+        <kbd>⌘ K</kbd>
+      </label>
+      <div class="nav-actions">
+        <button class="icon-action" id="accountButton" aria-label="Account"><span>♙</span><small>Account</small></button>
+        <button class="icon-action" id="wishlistButton" aria-label="Wishlist"><span>♡</span><small>Wishlist</small></button>
+        <button class="icon-action cart-nav" id="cartButton" aria-label="Open cart"><span>▱</span><small>Cart <b id="cartCount">0</b></small></button>
+      </div>
+    </div>
+    <nav class="category-nav" aria-label="Product categories">
+      <button class="category-link active" data-category="All">All products</button>
+      <button class="category-link" data-category="Phones">Phones</button>
+      <button class="category-link" data-category="Laptops">Laptops</button>
+      <button class="category-link" data-category="Audio">Audio</button>
+      <button class="category-link" data-category="Gaming">Gaming</button>
+      <button class="category-link" data-category="Wearables">Wearables</button>
+      <button class="category-link" data-category="Accessories">Accessories</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> THE NEXT THING IS HERE</span>
+        <h1>Upgrade<br>your <em>world.</em></h1>
+        <p>Good tech makes life click. Find the devices and little details that move you forward.</p>
+        <button class="primary-button" id="shopNow">Explore the collection <span>↗</span></button>
+        <div class="hero-proof"><span>✦</span> Curated tech. No noise.</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-product"><img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80" alt="Featured smartphone"></div>
+        <div class="floating-chip chip-top">01 / EVERYDAY ICONS</div>
+        <div class="floating-chip chip-bottom"><span class="chip-dot"></span> Made for what’s next</div>
+      </div>
+    </section>
+
+    <section class="products-section" id="productsSection">
+      <div class="section-heading">
+        <div><span class="eyebrow">THE GOOD STUFF</span><h2 id="productsHeading">Trending right now<span>.</span></h2><p id="resultsMessage">Fresh picks for your everyday.</p></div>
+        <div class="sort-wrap"><label for="sortSelect">Sort by</label><select id="sortSelect"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name</option></select></div>
+      </div>
+      <div id="productGrid" class="product-grid" aria-live="polite"><div class="loading">Loading the good stuff…</div></div>
+      <div id="emptyState" class="empty-state hidden"><div class="empty-icon">⌕</div><h3>No matches just yet</h3><p>Try another search or choose a different category.</p><button class="secondary-button" id="clearSearch">Clear search</button></div>
+    </section>
+
+    <section class="feature-banner">
+      <div><span class="eyebrow">BETTER TECH, LESS FUSS</span><h2>Small details.<br><em>Big difference.</em></h2><p>Useful upgrades, thoughtfully picked. That’s the Plugd way.</p></div>
+      <div class="banner-symbol">P<span>+</span></div>
+    </section>
+    <section class="benefits">
+      <div><span>↗</span><strong>Carefully curated</strong><small>Only the stuff worth knowing.</small></div>
+      <div><span>◈</span><strong>Secure by design</strong><small>Your account stays yours.</small></div>
+      <div><span>⌁</span><strong>Here to help</strong><small>Support when you need it.</small></div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="/"><span class="brand-mark">P</span> plugd<span class="brand-dot">.</span></a><p>Good tech for wherever life takes you.</p><small>© 2026 Plugd. Student project demo.</small></footer>
+
+  <div id="overlay" class="overlay hidden"></div>
+  <aside id="cartDrawer" class="drawer hidden" aria-label="Shopping cart">
+    <div class="drawer-header"><button class="back-button" id="closeCart" aria-label="Close cart">←</button><h2>My Cart <span id="cartTitleCount"></span></h2><button class="share-button" id="shareCart">♧ Share</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom">
+      <div class="bill-card"><h3>Bill details</h3><div class="bill-row"><span>▤ Items total</span><span id="itemsTotal">₹0</span></div><div class="bill-row"><span>♧ Delivery charge</span><span class="free">FREE</span></div><div class="bill-row"><span>♙ Handling charge</span><span>₹2</span></div><div class="bill-row bill-grand"><strong>Grand total ⓘ</strong><strong id="grandTotal">₹2</strong></div><div class="savings"><span>Your total savings</span><strong>₹0</strong></div></div>
+      <div class="cart-cta"><div><strong id="stickyTotal">₹2</strong><small>TOTAL</small></div><button id="checkoutButton">Login to Proceed <span>›</span></button></div>
+    </div>
+  </aside>
+
+  <section id="authModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <button class="modal-close" id="closeAuth" aria-label="Close">×</button>
+    <div class="modal-kicker">WELCOME TO PLUGD</div><h2 id="authTitle">Good to have you.</h2><p class="modal-subtitle">Sign in to keep your tech and your cart in sync.</p>
+    <div class="auth-tabs"><button class="auth-tab active" data-mode="login">Sign in</button><button class="auth-tab" data-mode="register">Create account</button></div>
+    <form id="authForm">
+      <label id="nameField" class="form-field hidden">Full name<input name="name" autocomplete="name" placeholder="Your name"></label>
+      <label class="form-field">Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+      <label class="form-field">Password<input name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="At least 8 characters"></label>
+      <button class="primary-button form-submit" type="submit" id="authSubmit">Sign in <span>↗</span></button>
+    </form>
+    <p class="auth-footnote">Demo store · No real payments are taken.</p>
+  </section>
+
+  <section id="checkoutModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <button class="modal-close" id="closeCheckout" aria-label="Close">×</button>
+    <div class="modal-kicker">ONE LAST THING</div><h2 id="checkoutTitle">Where should it go?</h2><p class="modal-subtitle">This creates a demo order; no payment is collected.</p>
+    <form id="checkoutForm"><label class="form-field">Shipping address<textarea name="shipping_address" required rows="3" placeholder="House, street, city, PIN code"></textarea></label><button class="primary-button form-submit" type="submit">Place demo order <span>↗</span></button></form>
+  </section>
+  <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
