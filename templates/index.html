@@ -18,12 +18,12 @@
         <kbd>⌘ K</kbd>
       </label>
       <div class="nav-actions">
-        <button class="icon-action" id="accountButton" aria-label="Account"><span>♙</span><small>Account</small></button>
-        <button class="icon-action" id="wishlistButton" aria-label="Wishlist"><span>♡</span><small>Wishlist</small></button>
-        <button class="icon-action cart-nav" id="cartButton" aria-label="Open cart"><span>▱</span><small>Cart <b id="cartCount">0</b></small></button>
+        <div class="account-wrap"><button class="icon-action" id="accountButton" aria-label="Account" aria-expanded="false"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.7-4 3.2-6 7.5-6s6.8 2 7.5 6"/></svg></span><small>Account</small></button><div id="accountMenu" class="account-menu hidden"><div id="accountMenuUser" class="account-menu-user">Welcome to Plugd</div><button id="accountMenuSignIn">Sign in / Create account</button><button id="signOutButton" class="signout-option hidden">Sign out</button></div></div>
+        <button class="icon-action cart-nav" id="cartButton" aria-label="Open cart"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 8H7"/><circle cx="10" cy="20" r="1.2"/><circle cx="18" cy="20" r="1.2"/></svg></span><small>Cart <b id="cartCount">0</b></small></button>
       </div>
     </div>
     <nav class="category-nav" aria-label="Product categories">
+      <button class="category-link my-orders-link" id="myOrdersButton">My Orders</button>
       <button class="category-link active" data-category="All">All products</button>
       <button class="category-link" data-category="Phones">Phones</button>
       <button class="category-link" data-category="Laptops">Laptops</button>
@@ -100,6 +100,11 @@
     <button class="modal-close" id="closeCheckout" aria-label="Close">×</button>
     <div class="modal-kicker">ONE LAST THING</div><h2 id="checkoutTitle">Where should it go?</h2><p class="modal-subtitle">This creates a demo order; no payment is collected.</p>
     <form id="checkoutForm"><label class="form-field">Shipping address<textarea name="shipping_address" required rows="3" placeholder="House, street, city, PIN code"></textarea></label><button class="primary-button form-submit" type="submit">Place demo order <span>↗</span></button></form>
+  </section>
+  <section id="ordersModal" class="modal orders-modal hidden" role="dialog" aria-modal="true" aria-labelledby="ordersTitle">
+    <button class="modal-close" id="closeOrders" aria-label="Close">×</button>
+    <div class="modal-kicker">YOUR PLUGD ACCOUNT</div><h2 id="ordersTitle">My Orders</h2><p class="modal-subtitle">Track your recent purchases and estimated delivery dates.</p>
+    <div id="ordersList" class="orders-list"><div class="loading">Loading your orders…</div></div>
   </section>
   <div id="toastRegion" class="toast-region" aria-live="polite" aria-atomic="true"></div>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>

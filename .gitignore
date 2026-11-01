@@ -1,0 +1,45 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# SQLite database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.sqlite-journal
+*.db-shm
+*.db-wal
+
+# Windows/Linux transfer metadata
+*.identifier
+Zone.Identifier
+*:Zone.Identifier
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Test and coverage files
+.pytest_cache/
+.coverage
+htmlcov/

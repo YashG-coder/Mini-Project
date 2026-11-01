@@ -10,12 +10,13 @@ app.secret_key = "change-this-dev-secret-before-deployment"
 
 SAMPLE_PRODUCTS = [
     {"name":"Nova X Pro Smartphone","category":"Phones","price":69999,"description":"A powerful smartphone with a vivid display and all-day battery.","image":"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80","stock":12,"featured":1},
-    {"name":"AirLite Wireless Headphones","category":"Audio","price":8999,"description":"Comfortable wireless headphones with rich sound.","image":"https://images.unsplash.com/photo-150 headphones?auto=format&fit=crop&w=800&q=80","stock":20,"featured":1},
-    {"name":"ProBook 14 Laptop","category":"Laptops","price":84999,"description":"A slim laptop for study, work, and everyday creativity.","image":"https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?auto=format&fit=crop&w=800&q=80","stock":8,"featured":1},
+    {"name":"AirLite Wireless Headphones","category":"Audio","price":8999,"description":"Comfortable wireless headphones with rich sound.","image":"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80","stock":20,"featured":1},
+    {"name":"ProBook 14 Laptop","category":"Laptops","price":84999,"description":"A slim laptop for study, work, and everyday creativity.","image":"https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80","stock":8,"featured":1},
     {"name":"Pulse Smartwatch","category":"Wearables","price":12999,"description":"Track your activity and stay connected throughout the day.","image":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80","stock":15,"featured":0},
     {"name":"GameBox Wireless Controller","category":"Gaming","price":5499,"description":"Responsive controls for a better gaming session.","image":"https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=800&q=80","stock":18,"featured":0},
     {"name":"USB-C Multiport Hub","category":"Accessories","price":2999,"description":"Connect your everyday devices with one compact hub.","image":"https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80","stock":25,"featured":0},
 ]
+SAMPLE_PRODUCTS.extend([{'name': 'PixelEdge 9', 'category': 'Phones', 'price': 58999, 'description': 'A crisp camera system and smooth everyday performance.', 'image': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=800&q=80', 'stock': 10, 'featured': 0}, {'name': 'iPhone 15', 'category': 'Phones', 'price': 64999, 'description': 'Premium design with a bright display and reliable performance.', 'image': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80', 'stock': 11, 'featured': 0}, {'name': 'Galaxy S24', 'category': 'Phones', 'price': 71999, 'description': 'A versatile flagship phone for work and entertainment.', 'image': 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80', 'stock': 12, 'featured': 0}, {'name': 'OnePlus Nord 4', 'category': 'Phones', 'price': 29999, 'description': 'Fast, fluid performance with a vivid AMOLED display.', 'image': 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80', 'stock': 13, 'featured': 0}, {'name': 'Moto Edge 50', 'category': 'Phones', 'price': 27999, 'description': 'A slim smartphone with a vibrant screen and capable camera.', 'image': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=800&q=80', 'stock': 14, 'featured': 0}, {'name': 'MacBook Air 13', 'category': 'Laptops', 'price': 99999, 'description': 'Lightweight performance for work, study, and travel.', 'image': 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80', 'stock': 15, 'featured': 0}, {'name': 'ZenBook OLED 14', 'category': 'Laptops', 'price': 92999, 'description': 'An OLED display and portable design for creators.', 'image': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80', 'stock': 16, 'featured': 0}, {'name': 'GamingBook 15', 'category': 'Laptops', 'price': 114999, 'description': 'Dedicated graphics and fast refresh for gaming.', 'image': 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80', 'stock': 17, 'featured': 0}, {'name': 'IdeaPad Slim 5', 'category': 'Laptops', 'price': 67999, 'description': 'A balanced everyday laptop with a compact build.', 'image': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80', 'stock': 18, 'featured': 0}, {'name': 'CreatorBook Pro', 'category': 'Laptops', 'price': 124999, 'description': 'A powerful workstation for demanding creative workflows.', 'image': 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80', 'stock': 19, 'featured': 0}, {'name': 'StudioPods Pro', 'category': 'Audio', 'price': 12999, 'description': 'Compact earbuds with clear calls and immersive audio.', 'image': 'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80', 'stock': 20, 'featured': 0}, {'name': 'SoundWave Bluetooth Speaker', 'category': 'Audio', 'price': 4999, 'description': 'Portable sound with punchy bass for every outing.', 'image': 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80', 'stock': 21, 'featured': 0}, {'name': 'QuietComfort Headset', 'category': 'Audio', 'price': 24999, 'description': 'Over-ear comfort and focused listening for long sessions.', 'image': 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80', 'stock': 22, 'featured': 0}, {'name': 'BassBeat Earbuds', 'category': 'Audio', 'price': 3499, 'description': 'Everyday wireless earbuds with a comfortable fit.', 'image': 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80', 'stock': 23, 'featured': 0}, {'name': 'Studio Monitor Headphones', 'category': 'Audio', 'price': 15999, 'description': 'Detailed sound for editing, mixing, and focused listening.', 'image': 'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80', 'stock': 24, 'featured': 0}, {'name': 'PlayStation Console', 'category': 'Gaming', 'price': 49999, 'description': 'A powerful console for immersive next-generation gaming.', 'image': 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=800&q=80', 'stock': 25, 'featured': 0}, {'name': 'RGB Mechanical Keyboard', 'category': 'Gaming', 'price': 6999, 'description': 'Tactile mechanical switches with customizable lighting.', 'image': 'https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80', 'stock': 26, 'featured': 0}, {'name': 'Precision Gaming Mouse', 'category': 'Gaming', 'price': 2999, 'description': 'Lightweight design and precise tracking for competitive play.', 'image': 'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80', 'stock': 27, 'featured': 0}, {'name': 'Gaming Headset X', 'category': 'Gaming', 'price': 7999, 'description': 'Clear team chat and immersive positional audio.', 'image': 'https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=800&q=80', 'stock': 28, 'featured': 0}, {'name': 'UltraWide Gaming Monitor', 'category': 'Gaming', 'price': 28999, 'description': 'A wide, smooth display for gaming and multitasking.', 'image': 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acd?auto=format&fit=crop&w=800&q=80', 'stock': 29, 'featured': 0}, {'name': 'FitBand Active', 'category': 'Wearables', 'price': 3999, 'description': 'A lightweight fitness band for daily activity tracking.', 'image': 'https://images.unsplash.com/photo-1557935728-e6d1eaabe558?auto=format&fit=crop&w=800&q=80', 'stock': 30, 'featured': 0}, {'name': 'Smartwatch Pro', 'category': 'Wearables', 'price': 18999, 'description': 'A bright display with useful health and fitness tools.', 'image': 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=800&q=80', 'stock': 31, 'featured': 0}, {'name': 'Classic Hybrid Watch', 'category': 'Wearables', 'price': 9999, 'description': 'Classic styling with smart notifications and activity tracking.', 'image': 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80', 'stock': 32, 'featured': 0}, {'name': 'Sport Watch Ultra', 'category': 'Wearables', 'price': 22999, 'description': 'A rugged wearable built for outdoor adventures.', 'image': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80', 'stock': 33, 'featured': 0}, {'name': 'Everyday Smart Band', 'category': 'Wearables', 'price': 2999, 'description': 'A simple wearable for activity and sleep tracking.', 'image': 'https://images.unsplash.com/photo-1557935728-e6d1eaabe558?auto=format&fit=crop&w=800&q=80', 'stock': 34, 'featured': 0}, {'name': '65W USB-C Charger', 'category': 'Accessories', 'price': 2499, 'description': 'A compact fast charger for compatible phones and laptops.', 'image': 'https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80', 'stock': 35, 'featured': 0}, {'name': 'Braided USB-C Cable', 'category': 'Accessories', 'price': 799, 'description': 'A durable cable for charging and everyday connectivity.', 'image': 'https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80', 'stock': 36, 'featured': 0}, {'name': 'Laptop Sleeve 14', 'category': 'Accessories', 'price': 1499, 'description': 'A padded sleeve to protect your laptop on the move.', 'image': 'https://images.unsplash.com/photo-1622560480654-d96214fdc887?auto=format&fit=crop&w=800&q=80', 'stock': 37, 'featured': 0}, {'name': 'Wireless Charging Pad', 'category': 'Accessories', 'price': 1999, 'description': 'A simple charging pad for compatible devices.', 'image': 'https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80', 'stock': 38, 'featured': 0}, {'name': 'Adjustable Laptop Stand', 'category': 'Accessories', 'price': 1799, 'description': 'An ergonomic stand for a more comfortable desk setup.', 'image': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80', 'stock': 39, 'featured': 0}])
 
 def connect():
     con = sqlite3.connect(DB_PATH)
@@ -49,12 +50,6 @@ def init_db():
             quantity INTEGER NOT NULL DEFAULT 1,
             UNIQUE(user_id, product_id)
         );
-        CREATE TABLE IF NOT EXISTS wishlist_items(
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-            product_id INTEGER NOT NULL REFERENCES products(id) ON DELETE CASCADE,
-            UNIQUE(user_id, product_id)
-        );
         CREATE TABLE IF NOT EXISTS orders(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             user_id INTEGER NOT NULL REFERENCES users(id),
@@ -71,15 +66,22 @@ def init_db():
             unit_price REAL NOT NULL
         );
         """)
-        count = con.execute("SELECT COUNT(*) FROM products").fetchone()[0]
-        if count == 0:
-            for p in SAMPLE_PRODUCTS:
-                # Keep seeded URLs valid even if a remote image later disappears.
-                if "150 headphones" in p["image"]:
-                    p["image"] = "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+        # Keep the ProBook catalogue image focused on a laptop, including in existing databases.
+        con.execute("UPDATE products SET image=? WHERE name=?", (
+            "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+            "ProBook 14 Laptop"
+        ))
+        # Insert any newly added sample products without duplicating existing catalogue rows.
+        for p in SAMPLE_PRODUCTS:
+            if not con.execute("SELECT id FROM products WHERE name=?", (p["name"],)).fetchone():
                 con.execute("""INSERT INTO products(name,category,price,description,image,stock,featured)
                                VALUES(?,?,?,?,?,?,?)""",
-                             (p["name"],p["category"],p["price"],p["description"],p["image"],p["stock"],p["featured"]))
+                            (p["name"],p["category"],p["price"],p["description"],p["image"],p["stock"],p["featured"]))
+        # Upgrade existing databases so each order has an estimated delivery date.
+        columns = {r["name"] for r in con.execute("PRAGMA table_info(orders)").fetchall()}
+        if "delivery_date" not in columns:
+            con.execute("ALTER TABLE orders ADD COLUMN delivery_date TEXT")
+        con.execute("UPDATE orders SET delivery_date=date(created_at, '+5 days') WHERE delivery_date IS NULL OR delivery_date='' ")
 
 def current_user():
     return session.get("user_id")
@@ -224,29 +226,6 @@ def delete_cart_item(product_id):
         con.execute("DELETE FROM cart_items WHERE user_id=? AND product_id=?", (current_user(),product_id))
     return get_cart()
 
-@app.get("/api/wishlist")
-def get_wishlist():
-    if not current_user(): return jsonify({"items":[]})
-    with connect() as con:
-        rows = con.execute("""SELECT p.* FROM wishlist_items w JOIN products p ON p.id=w.product_id
-                              WHERE w.user_id=?""", (current_user(),)).fetchall()
-    return jsonify({"items":[dict(r) for r in rows]})
-
-@app.post("/api/wishlist/<int:product_id>")
-def toggle_wishlist(product_id):
-    err = require_login()
-    if err: return err
-    with connect() as con:
-        exists = con.execute("SELECT id FROM wishlist_items WHERE user_id=? AND product_id=?",
-                             (current_user(),product_id)).fetchone()
-        if exists:
-            con.execute("DELETE FROM wishlist_items WHERE user_id=? AND product_id=?", (current_user(),product_id))
-            saved = False
-        else:
-            con.execute("INSERT OR IGNORE INTO wishlist_items(user_id,product_id) VALUES(?,?)",
-                        (current_user(),product_id))
-            saved = True
-    return jsonify({"saved":saved})
 
 @app.post("/api/orders")
 def create_order():
@@ -264,7 +243,7 @@ def create_order():
             if r["quantity"] > r["stock"]:
                 return jsonify({"error":"A product no longer has enough stock."}), 400
         total = sum(r["price"]*r["quantity"] for r in rows)
-        cur = con.execute("INSERT INTO orders(user_id,total_amount,shipping_address) VALUES(?,?,?)",
+        cur = con.execute("INSERT INTO orders(user_id,total_amount,shipping_address,delivery_date) VALUES(?,?,?,date('now', '+5 days'))",
                           (current_user(),total,address))
         order_id = cur.lastrowid
         for r in rows:
@@ -272,7 +251,8 @@ def create_order():
                         (order_id,r["id"],r["quantity"],r["price"]))
             con.execute("UPDATE products SET stock=stock-? WHERE id=?", (r["quantity"],r["id"]))
         con.execute("DELETE FROM cart_items WHERE user_id=?", (current_user(),))
-    return jsonify({"message":"Demo order placed","order_id":order_id,"total":total}), 201
+        delivery_date = con.execute("SELECT delivery_date FROM orders WHERE id=?", (order_id,)).fetchone()["delivery_date"]
+    return jsonify({"message":"Demo order placed","order_id":order_id,"total":total,"delivery_date":delivery_date}), 201
 
 @app.get("/api/orders")
 def get_orders():
@@ -280,7 +260,13 @@ def get_orders():
     if err: return err
     with connect() as con:
         rows = con.execute("SELECT * FROM orders WHERE user_id=? ORDER BY id DESC", (current_user(),)).fetchall()
-    return jsonify([dict(r) for r in rows])
+        result = []
+        for order in rows:
+            items = con.execute("""SELECT p.name,p.image,oi.quantity,oi.unit_price
+                                   FROM order_items oi JOIN products p ON p.id=oi.product_id
+                                   WHERE oi.order_id=?""", (order["id"],)).fetchall()
+            result.append({**dict(order), "items":[dict(item) for item in items]})
+    return jsonify(result)
 
 @app.get("/api/admin/products")
 def admin_products():
